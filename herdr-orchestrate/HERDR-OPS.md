@@ -9,7 +9,7 @@ Transcripts scroll off and compact away; the run-directory files (see the skill)
 ## Harness quirks
 
 - Claude args after `--`: `--model <model> --effort <level>` plus the agreed posture: `--permission-mode bypassPermissions` (yolo) or `--permission-mode acceptEdits` (auto, orchestrator handles the remaining prompts). If a start is blocked by a permission classifier, retry with a milder permission flag.
-- Pass Claude model IDs exactly as configured, including context-window suffixes: `--model claude-fable-5` overrides a `claude-fable-5[1m]` settings default and silently shrinks the window. Quote the brackets.
+- Pass Claude model IDs exactly as configured, including context-window suffixes: `--model claude-fable-5-1` overrides a `claude-fable-5-1[1m]` settings default and silently shrinks the window. Quote the brackets.
 - Codex args after `--`: `-c model_reasoning_effort=<level>` plus the agreed posture: `-c approval_policy=never -c sandbox_mode=danger-full-access` (yolo) or `-c approval_policy=on-request` (auto). Codex has no effort flag; the `-c` config is the way.
 - Codex invokes skills with a `$` prefix (`$code-review`, `$tdd`), not `/`. The convention has changed before; if `$` misfires, read the pane for what Codex currently accepts.
 - Some harness environments hold back subagent use unless the prompt authorizes it. Every brief and reviewer prompt authorizes subagents explicitly, and reviewer independence is phrased as "one of two independent reviewers", a wording that keeps subagents available.

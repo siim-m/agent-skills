@@ -5,8 +5,8 @@ Opinionated rankings maintained by the repo owner between runs (a run does not m
 | model       | cost | intelligence | taste | native harness |
 | ----------- | ---- | ------------ | ----- | -------------- |
 | gpt-5.6-sol | 9    | 8            | 6     | Codex CLI (`codex`) |
-| opus-5      | 6    | 8            | 8     | Claude Code (`claude --model 'claude-opus-5[1m]'`) |
-| fable-5     | 2    | 9            | 9     | Claude Code (`claude --model 'claude-fable-5[1m]'`) |
+| opus-5      | 6    | 8            | 8     | Claude Code (`claude --model 'claude-opus-5[1m]'`)  |
+| fable-5-1   | 2    | 9            | 9     | Claude Code (`claude --model 'claude-fable-5-1[1m]'`) |
 
 Run every model in its native harness. Do not proxy one vendor's model through another vendor's harness.
 
