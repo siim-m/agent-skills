@@ -4,18 +4,18 @@ Opinionated rankings maintained by the repo owner between runs (a run does not m
 
 | model       | cost | intelligence | taste | native harness |
 | ----------- | ---- | ------------ | ----- | -------------- |
-| gpt-5.6-sol | 9    | 8            | 6     | Codex CLI (`codex`) |
-| opus-5      | 6    | 8            | 8     | Claude Code (`claude --model 'claude-opus-5[1m]'`)  |
+| gpt-6-astra | 9    | 9            | 7     | Codex CLI (`codex`) |
+| opus-5      | 6    | 8            | 7     | Claude Code (`claude --model 'claude-opus-5[1m]'`)  |
 | fable-5-1   | 2    | 9            | 9     | Claude Code (`claude --model 'claude-fable-5-1[1m]'`) |
 
 Run every model in its native harness. Do not proxy one vendor's model through another vendor's harness.
 
 ## Defaults by task
 
-- Bulk/mechanical implementation (clear spec, migrations, data plumbing): gpt-5.6-sol at medium.
-- Heavy grunt work where taste matters little but volume is large: gpt-5.6-sol at xhigh.
+- Bulk/mechanical implementation (clear spec, migrations, data plumbing): gpt-6-astra at medium.
+- Heavy grunt work where taste matters little but volume is large: gpt-6-astra at xhigh.
 - API design, domain modeling, anything user-facing (UI, copy): fable-5 at high, or taste ≥ 7.
-- Code review: two reviewers in parallel, consolidated by the orchestrator: gpt-5.6-sol plus fable-5. Per-ticket rounds run both at high; spec-level rounds run both at xhigh. Sol reproduces findings by executing probes; fable finds structural issues by reading; each catches what the other misses. Budget fallback: gpt-5.6-sol at high alone, run as the protocol's single-reviewer case. There is no rule that a reviewer must be a different lab than the implementer.
+- Code review: two reviewers in parallel, consolidated by the orchestrator: gpt-6-astra plus fable-5. Per-ticket rounds run both at high; spec-level rounds run both at xhigh. Sol reproduces findings by executing probes; fable finds structural issues by reading; each catches what the other misses. Budget fallback: gpt-6-astra at high alone, run as the protocol's single-reviewer case. There is no rule that a reviewer must be a different lab than the implementer.
 - Never Haiku.
 - Plain `claude-fable-5` (no suffix) is the short-context variant that auto-compacts mid-task; an implementer may run it when boundary compaction (HERDR-OPS.md) is not worth the babysitting.
 
